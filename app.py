@@ -130,13 +130,14 @@ def main():
     1. **DON'T USE THIS WHEN YOU HAVE NOTES:** Use this when you don't have proper notes (for e.g. when the subject is new). If your teacher has provided notes, please study that.
     2. **Only VTU Model papers for now:** For now, this only supports VTU official model papers. It won't support scanned question paper. Use the ones you get from the official website.
     3. **Not perfect:** Repeating point number 1, this HAS issues. Don't completely rely on this. This cannot answer questions which have diagrams and photos.
-    4. **To get answer:** Upload the PDF, click on Analyze and it should scan our database if the question paper has been already answered. If you're not satisfied with that answer, click on analzye again so that request goes to the Groq (alternative to ChatGPT) API and you get a new answer. Press Ctrl+P, and select print to pdf to get a PDF file of the answers (I'm too lazy to add a print button, sorry). 
+    4. **To get answer:** Upload the PDF, click on Analyze and it should scan our database if the question paper has been already answered. If you're not satisfied with that answer, click on Analyze Again so that the request goes to the Groq (alternative to ChatGPT) API and you get a new answer. Press Ctrl+P, and select print to PDF to get a PDF file of the answers (I'm too lazy to add a print button, sorry). 
     5. **My contact:**
-        - [LinkedIn](https://www.linkedin.com/in/ayushraj-parihar-01a937267/)
-        - [Instagram](https://www.instagram.com/ayushrajsinghparihar)
-        - [Email](mailto:ayushrajparihar222sp@gmail.com)
-        - Reach out if you have any suggestions.
+        [LinkedIn ](https://www.linkedin.com/in/ayushraj-parihar-01a937267/) | 
+        [ Instagram ](https://www.instagram.com/ayushrajsinghparihar) | 
+        [ Email ](mailto:ayushrajparihar222sp@gmail.com) | 
+         Reach out if you have any suggestions.
     """)
+
 
     uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
 
