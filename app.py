@@ -24,9 +24,9 @@ def split_questions(text):
 def query_groq_api(text):
     api_key = os.getenv('GROQ_API_KEY')
     if not api_key:
-        raise ValueError("API key not found in environment variables.")
+        raise ValueError("API key not found.")
 
-    endpoint = "https://api.groq.com/openai/v1/chat/completions"  # Ensure this is correct
+    endpoint = "https://api.groq.com/openai/v1/chat/completions"  
     headers = {
         'Authorization': f'Bearer {api_key}',
         'Content-Type': 'application/json'
@@ -35,14 +35,14 @@ def query_groq_api(text):
         "messages": [
             {
                 "role": "system",
-                "content": "You should answer the questions given in the text"
+                "content": "You should answer the questions given in the text. Exaggerate it enough so that single answer has more than 200-500 words."
             },
             {
                 "role": "user",
                 "content": text
             }
         ],
-        "model": "llama3-8b-8192"  # Ensure this is a valid model for the API
+        "model": "llama3-8b-8192"  # Model for Groq
     }
 
     try:
