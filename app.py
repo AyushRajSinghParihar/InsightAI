@@ -41,8 +41,8 @@ def get_existing_responses(subject_code, module):
     return rows
 
 def extract_subject_code(text):
-    # Assuming the subject code is the first 6 characters of the text
-    match = re.match(r'\b[A-Z]{3}\d{3}\b', text)
+    # Extract subject code by looking for the first occurrence of a pattern like 'ABC123'
+    match = re.search(r'\b[A-Z]{3}\d{3}\b', text)
     return match.group(0) if match else ""
 
 def extract_text_from_pdf(file):
@@ -53,10 +53,10 @@ def extract_text_from_pdf(file):
     return text
 
 def split_questions(text):
-    modules = text.split("Module –")
+    modules = text.split("Module -")
     module_texts = []
     for i in range(1, len(modules)):
-        module_texts.append("Module –" + modules[i].strip())
+        module_texts.append("Module -" + modules[i].strip())
     return module_texts
 
 def query_groq_api(text):
@@ -64,7 +64,7 @@ def query_groq_api(text):
     if not api_key:
         raise ValueError("API key not found.")
 
-    endpoint = "https://api.groq.com/openai/v1/chat/completions"  
+    endpoint = "https://api.groq.com/openai/v1/chat/completions"
     headers = {
         'Authorization': f'Bearer {api_key}',
         'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ def query_groq_api(text):
         "messages": [
             {
                 "role": "system",
-                "content": "You should answer the questions given in the text. Exaggerate it enough so that single answer has more than 200-500 words."
+                "content": "You should answer the questions given in the text. Exaggerate it enough so that a single answer has more than 200-500 words."
             },
             {
                 "role": "user",
