@@ -133,6 +133,7 @@ def main():
     4. **To get answer:** Upload the PDF, click on Analyze and it should scan our database if the question paper has been already answered. If you're not satisfied with that answer, click on Analyze Again so that the request goes to the Groq (alternative to ChatGPT) API and you get a new answer. Press Ctrl+P, and select print to PDF to get a PDF file of the answers (I'm too lazy to add a print button, sorry). 
     5. **My contact:**
         [LinkedIn ](https://www.linkedin.com/in/ayushraj-parihar-01a937267/) | 
+        [GitHub ](https://github.com/AyushRajSinghParihar/) | 
         [ Instagram ](https://www.instagram.com/ayushrajsinghparihar) | 
         [ Email ](mailto:ayushrajparihar222sp@gmail.com) | 
          Reach out if you have any suggestions.
