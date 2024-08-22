@@ -75,7 +75,7 @@ def query_groq_api(text, concise=False):
         'Content-Type': 'application/json'
     }
     
-    system_content = "Answer these in short and bulleted points." if concise else "You should answer the questions given in the text. Exaggerate it enough so that a single answer has more than 200-500 words."
+    system_content = "Answer all of the questions including the optional ones in short and bulleted points." if concise else "You should answer the questions given in the text. Exaggerate it enough so that a single answer has more than 200-500 words."
 
     payload = {
         "messages": [
