@@ -164,7 +164,7 @@ def main():
 
         analyze = st.button("Analyze")
         analyze_again = st.button("Analyze Again")
-        sos = st.button("PHATIPADIHAI")
+        sos = st.button("SOS")
 
         if analyze:
             with st.spinner("Analyzing..."):
